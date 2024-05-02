@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "attributes": {
+            "Name": "Istituto delle arti",
+            "Description": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "text",
+                            "text": "Il percorso del liceo artistico è indirizzato allo studio dei fenomeni estetici e alla pratica artistica. Favorisce l'acquisizione dei metodi specifici della ricerca e della produzione artistica e la padronanza dei linguaggi e delle tecniche relative. Fornisce allo studente gli strumenti necessari per conoscere il patrimonio artistico nel suo contesto storico e culturale e per coglierne appieno la presenza e il valore nella società odierna. Guida lo studente ad approfondire e a sviluppare le conoscenze e le abilità e a maturare le competenze necessarie per dare espressione alla propria creatività e capacità progettuale nell'ambito delle arti (Articolo 4 del Decreto del Presidente della Repubblica n. 89 del 15 marzo 2010)."
+                        }
+                    ]
+                }
+            ],
+            "createdAt": "2024-05-02T09:26:58.371Z",
+            "updatedAt": "2024-05-02T09:26:58.371Z",
+            "schools": {
+                "data": [
+                    {
+                        "id": 1,
+                        "attributes": {
+                            "Name": "LICEO ARTISTICO \"Depero\"",
+                            "Lat": 45.88784153278946,
+                            "Long": 11.045952774128915,
+                            "City": "Rovereto",
+                            "Address": "Via Delle Fosse, 9",
+                            "CAP": "38068",
+                            "Province": "TN",
+                            "Website": "https://www.istitutodellearti.tn.it/",
+                            "Phone": "+39 0464 438836",
+                            "Fax": " +39 0461 824345",
+                            "PEC": "vittoria@pec.provincia.tn.it",
+                            "Email": "dir.istitutodellearti@scuole.provincia.tn.it",
+                            "createdAt": "2024-05-02T09:32:36.008Z",
+                            "updatedAt": "2024-05-02T12:05:53.875Z",
+                            "Description": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "text": "bla bla bla bla"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Type": "Liceo"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+]

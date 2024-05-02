@@ -1,0 +1,111 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schools",
+  "info": {
+    "singularName": "school",
+    "pluralName": "schools",
+    "displayName": "School",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Lat": {
+      "type": "float"
+    },
+    "Long": {
+      "type": "float"
+    },
+    "City": {
+      "type": "string",
+      "required": true
+    },
+    "Address": {
+      "type": "string",
+      "required": true
+    },
+    "CAP": {
+      "type": "string",
+      "required": true
+    },
+    "Province": {
+      "type": "string",
+      "required": true
+    },
+    "Website": {
+      "type": "string"
+    },
+    "Video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "Phone": {
+      "type": "string",
+      "required": true
+    },
+    "Fax": {
+      "type": "string"
+    },
+    "PEC": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "Logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "open_days": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::open-day.open-day",
+      "mappedBy": "school"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Liceo",
+        "Istituto Tecnico",
+        "Istruzione e formazione professionale",
+        "Istituto professionale"
+      ],
+      "required": true
+    },
+    "paths": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::path.path",
+      "mappedBy": "schools"
+    },
+    "branches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::branch.branch",
+      "mappedBy": "school"
+    },
+    "institute": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::institute.institute",
+      "inversedBy": "schools"
+    }
+  }
+}

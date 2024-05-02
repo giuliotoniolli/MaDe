@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paths",
+  "info": {
+    "singularName": "path",
+    "pluralName": "paths",
+    "displayName": "Path"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "Duration": {
+      "type": "string"
+    },
+    "schools": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::school.school",
+      "inversedBy": "paths"
+    }
+  }
+}
