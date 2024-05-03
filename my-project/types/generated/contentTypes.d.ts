@@ -829,41 +829,6 @@ export interface ApiBranchBranch extends Schema.CollectionType {
   };
 }
 
-export interface ApiInstituteInstitute extends Schema.CollectionType {
-  collectionName: 'institutes';
-  info: {
-    singularName: 'institute';
-    pluralName: 'institutes';
-    displayName: 'Institute';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    Name: Attribute.String;
-    Description: Attribute.Blocks;
-    schools: Attribute.Relation<
-      'api::institute.institute',
-      'oneToMany',
-      'api::school.school'
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::institute.institute',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::institute.institute',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiOpenDayOpenDay extends Schema.CollectionType {
   collectionName: 'open_days';
   info: {
@@ -982,11 +947,6 @@ export interface ApiSchoolSchool extends Schema.CollectionType {
       'oneToMany',
       'api::branch.branch'
     >;
-    institute: Attribute.Relation<
-      'api::school.school',
-      'manyToOne',
-      'api::institute.institute'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1023,7 +983,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::branch.branch': ApiBranchBranch;
-      'api::institute.institute': ApiInstituteInstitute;
       'api::open-day.open-day': ApiOpenDayOpenDay;
       'api::path.path': ApiPathPath;
       'api::school.school': ApiSchoolSchool;

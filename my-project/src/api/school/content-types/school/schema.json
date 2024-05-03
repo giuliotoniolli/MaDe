@@ -100,12 +100,6 @@
       "relation": "oneToMany",
       "target": "api::branch.branch",
       "mappedBy": "school"
-    },
-    "institute": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::institute.institute",
-      "inversedBy": "schools"
     }
   }
 }

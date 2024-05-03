@@ -1,2 +1,33 @@
-<img src="{{baseurl}}{{scuola.Logo.data.attributes.formats.thumbnail.url}}" alt="">
-<p>{{scuola.Name}}</p>
+
+<div>
+    <div id="top">   
+        <img id="logo" src="{{baseurl}}{{scuola.Logo.data.attributes.url}}" alt=""/>
+        <p [routerLink]="['']">torna alla homerpage</p>
+        <p id="name">{{scuola.Name}}</p>
+    </div>
+    <div id="video" class="container-fluid"> 
+        <!-- <video src="{{baseurl}}{{scuola.Video.data.attributes.url}}" autoplay></video> -->
+    </div>
+
+
+        
+        <p>City: {{scuola.City}}</p>
+        <p>Address: {{scuola.Address}}</p>
+        <p>Latitude: {{scuola.Lat}}</p>
+        <p>Longitude: {{scuola.Long}}</p>
+
+        <p>CAP: {{scuola.CAP}}</p>
+        <p>Province: {{scuola.Province}}</p>
+        <p>Website: <a href="{{scuola.Website}}" target="_blank">{{scuola.Website}}</a></p>
+        <p>Phone: {{scuola.Phone}}</p>
+        <p>Fax: {{scuola.Fax}}</p>
+        PEC: <a href="mailto:{{scuola.PEC}}">{{scuola.PEC}}</a>
+        Email: <a href="mailto:{{scuola.Email}}">{{scuola.Email}}</a>
+        <p>Created at: {{scuola.createdAt}}</p>
+        <p>Updated at: {{scuola.updatedAt}}</p>
+        <h2>Description:</h2>
+        <p>{{scuola.Description[0].children[0].text}}</p>
+        <p>Type: {{scuola.Type}}</p>
+
+        
+</div>

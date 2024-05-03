@@ -1,4 +1,19 @@
+export interface Schools {
+  data: School[]
+  meta: any
+}
+
+export interface SingleSchool {
+  data: School
+  meta: any
+}
+
 export interface School {
+  id: number
+  attributes: Attributes
+}
+
+export interface Attributes {
   Name: string
   Lat: number
   Long: number
@@ -13,31 +28,39 @@ export interface School {
   Email: string
   createdAt: string
   updatedAt: string
-  Description: Description2[]
+  Description: Description[]
   Type: string
-  Logo: Logo
+  Video: Video
+  Logo: LogoInfo
+  open_days: OpenDays
+  paths: Paths
+  branches: Branches
 }
 
-export interface Description2 {
+export interface Description {
   type: string
-  children: Children2[]
+  children: Children[]
 }
 
-export interface Children2 {
+export interface Children {
   type: string
   text: string
 }
 
+export interface Video {
+  data: any
+}
+
+export interface LogoInfo {
+  data: Logo
+}
+
 export interface Logo {
-  data: Data
-}
-
-export interface Data {
   id: number
-  attributes: Attributes3
+  attributes: AttributeL
 }
 
-export interface Attributes3 {
+export interface AttributeL {
   name: string
   alternativeText: string
   caption: string
@@ -71,4 +94,29 @@ export interface Thumbnail {
   size: number
   sizeInBytes: number
   url: string
+}
+
+export interface OpenDays {
+  data: any[]
+}
+
+export interface Paths {
+  data: Daum2[]
+}
+
+export interface Daum2 {
+  id: number
+  attributes: Attributes3
+}
+
+export interface Attributes3 {
+  Name: string
+  Description: any
+  Duration: any
+  createdAt: string
+  updatedAt: string
+}
+
+export interface Branches {
+  data: any[]
 }

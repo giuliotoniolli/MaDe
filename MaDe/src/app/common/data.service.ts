@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Root } from './apptypes';
-import { School } from './schooltype';
+import { Schools, SingleSchool } from './schooltype';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +12,11 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getInstitutes(): Observable<Root> {
-    return this.http.get<Root>(this.baseUrl + '/api/institutes?&populate=*');
+  getSchools(): Observable<Schools> {
+    return this.http.get<Schools>(this.baseUrl + '/api/schools?populate=*');
   }
 
-  getSchools(): Observable<School> {
-    return this.http.get<School>(this.baseUrl + '/api/institutes?populate[schools][populate][0]=Logo')
-  }
+  getSchoolById(id:number): Observable<SingleSchool> {
+    return this.http.get<SingleSchool>(this.baseUrl + `/api/schools/${id}?populate=*`)
+  } 
 }
