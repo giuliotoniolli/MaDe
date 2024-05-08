@@ -41,14 +41,6 @@
     "Website": {
       "type": "string"
     },
-    "Video": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "videos"
-      ]
-    },
     "Phone": {
       "type": "string",
       "required": true
@@ -100,6 +92,20 @@
       "relation": "oneToMany",
       "target": "api::branch.branch",
       "mappedBy": "school"
+    },
+    "urlVideo": {
+      "type": "string"
+    },
+    "top": {
+      "type": "integer",
+      "required": true
+    },
+    "left": {
+      "type": "integer",
+      "required": true
+    },
+    "colore": {
+      "type": "string"
     }
   }
 }

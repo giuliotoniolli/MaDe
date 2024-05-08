@@ -1,4 +1,14 @@
 
 <div id="map" #mappa>
-    <img src="/assets/mappa.png" alt="">
+    <div id="title">
+        <img src="/assets/naming_sito.png" id="titolo">
+    </div> 
+    @if(vai){
+        
+        @for(school of scuole; track school.id){
+            <app-card [scuola]="school.attributes" [id]="school.id" [top]="top(school.attributes.top)" [left]="left(school.attributes.left)"/>
+        }
+    }
+    <img src="/assets/mappa.jpg" alt="" width="100%">
+    
 </div>

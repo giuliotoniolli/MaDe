@@ -30,11 +30,14 @@ export interface Attributes {
   updatedAt: string
   Description: Description[]
   Type: string
-  Video: Video
   Logo: LogoInfo
   open_days: OpenDays
   paths: Paths
   branches: Branches
+  urlVideo: string
+  top:number
+  left:number
+  colore:string
 }
 
 export interface Description {
@@ -45,10 +48,6 @@ export interface Description {
 export interface Children {
   type: string
   text: string
-}
-
-export interface Video {
-  data: any
 }
 
 export interface LogoInfo {

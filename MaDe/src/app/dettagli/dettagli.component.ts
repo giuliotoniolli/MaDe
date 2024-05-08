@@ -26,6 +26,5 @@ export class DettagliComponent implements OnInit{
       })
     })
   }
-
-  
+ 
 }

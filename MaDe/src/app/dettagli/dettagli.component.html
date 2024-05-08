@@ -6,11 +6,9 @@
         <p id="name">{{scuola.Name}}</p>
     </div>
     <div id="video" class="container-fluid"> 
-        <!-- <video src="{{baseurl}}{{scuola.Video.data.attributes.url}}" autoplay></video> -->
+        <video src="{{scuola.urlVideo}}" autoplay></video>
     </div>
-
-
-        
+    <div class="container my-4">
         <p>City: {{scuola.City}}</p>
         <p>Address: {{scuola.Address}}</p>
         <p>Latitude: {{scuola.Lat}}</p>
@@ -28,6 +26,5 @@
         <h2>Description:</h2>
         <p>{{scuola.Description[0].children[0].text}}</p>
         <p>Type: {{scuola.Type}}</p>
-
-        
+    </div>
 </div>

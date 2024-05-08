@@ -1,3 +1,20 @@
-<div>
-  SCUOLA
+<div class="pin" #pin [ngStyle]="{'top.px': top, 'left.px': left, '--bg-card': scuola.colore}">
+  <div class="info">
+    <div class="logo" [ngStyle]="{'background-image': UrlLogo}">
+    </div>
+    <div class="title">
+      <span>{{scuola.Name}}</span>
+    </div>
+    <div class="size">
+      <span>
+        <ul>
+          @for(indirizzo of scuola.paths.data; track indirizzo.id){
+            <li>{{indirizzo.attributes.Name}}</li>
+          }
+        </ul>
+      </span>
+    </div>
+      <span [routerLink]="['/dettagli', id]" >🔍</span>
+    
+  </div>
 </div>
