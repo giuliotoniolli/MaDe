@@ -9,7 +9,8 @@ import { Schools, SingleSchool } from './schooltype';
 export class DataService {
 
   // public baseUrl = 'https://zany-memory-q7q5x4qp7ggwhx759-1337.app.github.dev'
-  public baseUrl = 'http://127.0.0.1:1337'
+  // public baseUrl = 'http://127.0.0.1:1337'
+  public baseUrl = 'https://refactored-cod-7v9jx59pvxp5fxpvj-1337.app.github.dev'
 
   constructor(private http: HttpClient) { }
 
