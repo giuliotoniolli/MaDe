@@ -30,7 +30,7 @@ export interface Attributes {
   updatedAt: string
   Description: Description[]
   Type: string
-  Logo: LogoInfo
+  Logo: ImgInfo
   open_days: OpenDays
   paths: Paths
   branches: Branches
@@ -38,6 +38,7 @@ export interface Attributes {
   top:number
   left:number
   colore:string
+  Sfondo: ImgInfo
 }
 
 export interface Description {
@@ -50,16 +51,16 @@ export interface Children {
   text: string
 }
 
-export interface LogoInfo {
-  data: Logo
+export interface ImgInfo {
+  data: Img
 }
 
-export interface Logo {
+export interface Img {
   id: number
-  attributes: AttributeL
+  attributes: AttributeImg
 }
 
-export interface AttributeL {
+export interface AttributeImg {
   name: string
   alternativeText: string
   caption: string

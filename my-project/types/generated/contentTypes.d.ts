@@ -950,6 +950,7 @@ export interface ApiSchoolSchool extends Schema.CollectionType {
     top: Attribute.Integer & Attribute.Required;
     left: Attribute.Integer & Attribute.Required;
     colore: Attribute.String;
+    Sfondo: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
