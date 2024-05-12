@@ -3,9 +3,8 @@ import { CardComponent } from '../card/card.component';
 import { DataService } from '../common/data.service';
 import { MappaComponent } from '../mappa/mappa.component';
 import { DettagliComponent } from '../dettagli/dettagli.component';
-import { Attributes, School, Schools } from '../common/schooltype';
+import { OpenDays, School, Schools } from '../common/schooltype';
 import { TimelineComponent } from '../timeline/timeline.component';
-import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +16,7 @@ import { FooterComponent } from '../footer/footer.component';
 export class HomeComponent implements OnInit{
 
   scuole!:Schools;
+  openDay!:OpenDays;
   attributi:School[] = [];
   
   constructor(private dataService: DataService) {}
@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit{
       this.scuole.data.forEach(temp => this.attributi.push(temp));
       console.table(this.attributi);
       // this.scuola = this.scuole['data'][0]['attributes'];
+      this.openDay = this.scuole.data[1].attributes.open_days;
     })
   }
 }

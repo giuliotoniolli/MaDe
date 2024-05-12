@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "develop",
+			"path": "my-project",
+			"problemMatcher": [],
+			"label": "npm: develop - my-project",
+			"detail": "strapi develop"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "MaDe",
+			"problemMatcher": [],
+			"label": "npm: ng - MaDe",
+			"detail": "ng"
+		}
+	]
+}

@@ -842,7 +842,6 @@ export interface ApiOpenDayOpenDay extends Schema.CollectionType {
   };
   attributes: {
     Date: Attribute.Date & Attribute.Required;
-    Description: Attribute.Blocks & Attribute.Required;
     StartTime: Attribute.Time;
     EndTime: Attribute.Time;
     Note: Attribute.Text;

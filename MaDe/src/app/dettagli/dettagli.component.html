@@ -1,4 +1,4 @@
-
+<!-- 
 <div>
     <div id="top">   
         <img id="logo" src="{{baseurl}}{{scuola.Logo.data.attributes.url}}" alt=""/>
@@ -27,4 +27,59 @@
         <p>{{scuola.Description[0].children[0].text}}</p>
         <p>Type: {{scuola.Type}}</p>
     </div>
+</div> -->
+
+<div id="body" [ngStyle]="{'background-image': UrlImg}">
+    <div id="top">   
+        <img id="logo" src="{{baseurl}}{{scuola.Logo.data.attributes.url}}" alt=""/>
+        <p id="name">{{scuola.Name}}</p>
+        <img id="map" [routerLink]="['']" src="assets/maps.png" alt="" title="torna alla mappa">
+    </div>
+    <div id="video" > 
+        <video src="{{scuola.urlVideo}}" autoplay></video>
+    </div>
+    <div class="container row">
+        <div id="info" class="col">
+            <div class="section">
+                <img src="assets/location.png" alt="">
+                <div class="text">
+                    <h1>INDIRIZZO:</h1>
+                <p>{{scuola.Address}} {{scuola.CAP}} {{scuola.City}} {{scuola.Province}}</p>
+                </div>
+            </div>
+            <div class="section">
+                <img src="assets/direction.png" alt="">
+                <div class="text">
+                    <h1>PERCORSO FORMATIVO:</h1>
+                    <ul>
+                        @for(path of scuola.paths.data; track path.id){
+                            <li 
+                            (click)="dettagli(path.attributes.Description)" 
+                            title="clicca per la descrizione">
+                            {{path.attributes.Name}} ➡️
+                            </li>
+                        }
+                    </ul>
+                   
+                </div>
+            </div>
+            <div class="section">
+                <img src="assets/phone-call.png" alt="">
+                <div class="text">
+                    <h1>CONTATTI:</h1>
+                <p>Telefono: <a href="tel:{{scuola.Phone}}">{{scuola.Phone}}</a></p>
+                <p>Fax: <a href="tel:{{scuola.Fax}}">{{scuola.Fax}}</a></p>
+                <p>Mail: <a href="mailto:{{scuola.Email}}">{{scuola.Email}}</a></p>
+                <p>PEC: <a href="mailto:{{scuola.PEC}}">{{scuola.PEC}}</a></p>
+            <a href="{{scuola.Website}}">{{scuola.Website}}</a>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div id="descr" class="col p-3">
+            <h1>Descrizione</h1>
+            {{descrizione}}
+        </div>
+</div>
 </div>

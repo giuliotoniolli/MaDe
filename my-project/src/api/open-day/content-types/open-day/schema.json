@@ -16,10 +16,6 @@
       "type": "date",
       "required": true
     },
-    "Description": {
-      "type": "blocks",
-      "required": true
-    },
     "StartTime": {
       "type": "time"
     },

@@ -19,13 +19,12 @@
 
 .info {
   --bg-card: pink;
-  --light: #d9d9d9;
+  --light: #424242;
   --zinc-800: #18181b;
 }
 
 .logo {
   overflow: hidden;
-  cursor: pointer;
   position: relative;
   z-index: 5;
   width: 100%;
@@ -72,10 +71,8 @@
   
   font-size: 0.75rem;
   font-weight: 500;
-  color: black;
   text-wrap: nowrap;
-  border-radius: 0.5rem;
-  background-color: var(--bg-card);
+  border-radius: 0.1rem;
 }
 
 .invis {
@@ -84,7 +81,7 @@
 
 .pin:hover {
   /* Add animation properties */
-  animation: pinAnimation 0.5s ease-in;
+  animation: pinAnimation 0.2s ease-in;
   transform: rotate(0deg);
   height: auto;
   position: absolute;
@@ -123,12 +120,10 @@
     height: 14rem;
     border: solid var(--bg-card) 0.5rem;
     border-radius: 1rem;
-
   }
 }
 
-.pin:hover .info {
+.pin:hover .info{
   display: flex;
   flex-direction: column;
-
 }

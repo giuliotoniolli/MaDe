@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { School } from '../common/schooltype';
+import { DataService } from '../common/data.service';
 
 @Component({
   selector: 'app-mappa',
@@ -12,16 +13,15 @@ import { School } from '../common/schooltype';
 export class MappaComponent implements AfterViewInit {
   innerWidth: any;
   innerHeight: any;
-  vai:boolean = false;
 
+  constructor(public inst:DataService){}
+  
   @Input() scuole!:School[];
 
   @ViewChild('mappa') mappa!: ElementRef<HTMLElement>;
   
   @HostListener('window:resize', ['$event'])
 
-
-  
   onResize(event: any) {
 
     console.log(this.mappa.nativeElement.clientHeight, this.mappa.nativeElement.clientWidth)
@@ -40,8 +40,7 @@ export class MappaComponent implements AfterViewInit {
   ngAfterViewInit(): void {
 
     // console.log(this.mappa.nativeElement.offsetWidth, this.mappa.nativeElement.offsetHeight)
-    this.vai = true;
+    this.inst.mostraPin = true;
   }
-
 
 }

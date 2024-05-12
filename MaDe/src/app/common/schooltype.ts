@@ -97,22 +97,36 @@ export interface Thumbnail {
 }
 
 export interface OpenDays {
-  data: any[]
+  data: OpenDay[]
+}
+
+export interface OpenDay {
+  id: number
+  attributes: AttributesOD
+}
+
+export interface AttributesOD {
+  Date: string
+  StartTime: string
+  EndTime: string
+  Note: string
+  createdAt: string
+  updatedAt: string
 }
 
 export interface Paths {
-  data: Daum2[]
+  data: Path[]
 }
 
-export interface Daum2 {
+export interface Path {
   id: number
-  attributes: Attributes3
+  attributes: AttributesP
 }
 
-export interface Attributes3 {
+export interface AttributesP {
   Name: string
-  Description: any
-  Duration: any
+  Description: Description[]
+  Duration: string
   createdAt: string
   updatedAt: string
 }

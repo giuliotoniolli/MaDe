@@ -1,3 +1,10 @@
-<nav class="timeline">
-    TIMELINE
-  </nav>
+<div class="flex-parent">
+	<div>
+		@for(oD of openDays.data; track oD.id){
+			<div class="input">
+				<span>{{dataInv(oD.attributes.Date)}}</span> <!-- 07.05.2024 -->
+				<span>{{oD.attributes.StartTime.substring(0,5)}} - {{oD.attributes.EndTime.substring(0,5)}}</span> <!-- 03:45 - 08:00 -->
+			</div>
+		}
+	</div>
+</div>
