@@ -1,14 +1,37 @@
-.timeline {
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background-color: #333;
-    color: yellow;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000; 
+*{
+  margin: 0;
+}
+
+#timeline{
+  margin-top: 100px;
+  background-color: yellow;
+  width: 100%;
+  height: 5px;
+  position: fixed;
+   
+}
+#point-container{
+    margin-top: -8px;
+
+  width: 90%;
+ display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.point {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.point-text {
+    position: absolute;
+    top: -30px; /* Adjust this value to position the text above the point */
+    left: 100px;
+    transform: translateX(-50%);
+    text-align: ;
+    white-space: nowrap;
     text-align: center;
-  }
+}
