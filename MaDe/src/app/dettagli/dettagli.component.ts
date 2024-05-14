@@ -3,18 +3,18 @@ import { DataService } from '../common/data.service';
 import { Attributes, Description } from '../common/schooltype';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { NgStyle } from '@angular/common';
-import { MappaComponent } from '../mappa/mappa.component';
+import { TimelineComponent } from '../timeline/timeline.component';
 
 @Component({
   selector: 'app-dettagli',
   standalone: true,
-  imports: [RouterLink, NgStyle],
+  imports: [RouterLink, NgStyle, TimelineComponent],
   templateUrl: './dettagli.component.html',
   styleUrl: './dettagli.component.scss'
 })
 export class DettagliComponent implements OnInit{
   scuola!:Attributes;
-  descrizione:string = '';
+  descrizione!:Description[];
   baseurl!:string;
   UrlImg!:string;
 
@@ -28,14 +28,14 @@ export class DettagliComponent implements OnInit{
         this.UrlImg = 'url(' + this.baseurl + this.scuola.Sfondo.data.attributes.url + ')';
         // console.log(this.UrlImg);
         // console.log(data);
+        this.descrizione = this.scuola.Description;
       })
     })
-    this.scuola.Description.forEach(el => this.descrizione += el.children[0].text + ' ')
   }
 
   dettagli(descrizione:Description[]) {
-    this.descrizione = '';
-    descrizione.forEach(el => this.descrizione += el.children[0].text+ ' ')
+    if (descrizione[0].children[0].text != undefined)
+      this.descrizione = descrizione;
   }
  
 }

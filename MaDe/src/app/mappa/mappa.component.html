@@ -1,9 +1,9 @@
-
 <div id="map" #mappa>
-    <div id="title">
+    <div id="title" [ngStyle]="{'margin-left': orleft, 'margin-top': ortop, 'width': orwidth, 'position': position, 'flex-direction': flex}" class="pngImage">
         <img src="/assets/naming_sito.png" id="titolo">
+        <p>In questo sito potrai trovare l'offerta formativa delle scuole secondarie di secondo grado di Rovereto, consultare i vari indirizzi e i percorsi di studio che offrono.       </p>
     </div> 
-    @if(inst.mostraPin){
+    @if(mostraPin){
         
         @for(school of scuole; track school.id){
             <app-card [scuola]="school.attributes" [id]="school.id" [top]="top(school.attributes.top)" [left]="left(school.attributes.left)"/>

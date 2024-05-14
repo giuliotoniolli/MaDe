@@ -1,24 +1,33 @@
-import { AfterViewInit, Component, ElementRef, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Input, OnDestroy, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { School } from '../common/schooltype';
 import { DataService } from '../common/data.service';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-mappa',
   standalone: true,
-  imports: [CardComponent],
+  imports: [CardComponent, NgStyle],
   templateUrl: './mappa.component.html',
   styleUrl: './mappa.component.scss'
 })
 export class MappaComponent implements AfterViewInit {
   innerWidth: any;
   innerHeight: any;
+  mostraPin:Boolean = false;
+  ortop:string = '20vw';
+  orleft:string = '60%';
+  orwidth:string = '30%';
+  position:string = 'absolute';
+  flex:string = 'row';
 
-  constructor(public inst:DataService){}
+
+  constructor(public inst:DataService, private rend:Renderer2){}
   
   @Input() scuole!:School[];
 
   @ViewChild('mappa') mappa!: ElementRef<HTMLElement>;
+  @ViewChild('pngImage') pngElement!: ElementRef;
   
   @HostListener('window:resize', ['$event'])
 
@@ -38,9 +47,24 @@ export class MappaComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-
-    // console.log(this.mappa.nativeElement.offsetWidth, this.mappa.nativeElement.offsetHeight)
-    this.inst.mostraPin = true;
+    this.mostraPin = true;
   }
 
+  @HostListener('window:scroll', ['$event'])
+  handleScroll() {
+    const windowScroll = window.scrollY;
+    if (windowScroll >= 200) {
+      this.ortop = '1vw';
+      this.orleft = '1vw';
+      this.position = 'fixed';
+      this.orwidth = '20%';
+      this.flex = 'column';
+    } else {
+      this.ortop = '20vw';
+      this.orleft = '60%';
+      this.position = 'absolute';
+      this.orwidth = '30%';
+      this.flex = 'row';
+    }
+  };
 }

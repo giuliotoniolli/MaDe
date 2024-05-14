@@ -11,6 +11,7 @@
   left: 100px;
   background-color: var(--bg-card);
   color: black;
+  overflow: hidden;
 }
 
 .info {
@@ -122,8 +123,9 @@
     border-radius: 1rem;
   }
 }
-
-.pin:hover .info{
-  display: flex;
-  flex-direction: column;
+.pin:hover {
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
 }

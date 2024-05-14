@@ -4,10 +4,15 @@
 }
 
 #title{
-    position: absolute;
-    left: 60%;
-    top:20vw;
-    width:30%;
+    // position: absolute;
+    // left: 60%;
+    // top: 20vw;
+    // width: 30%;
+    transition: margin-top 0.3s, margin-left 0.3s;
+}
+p {
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #titolo {

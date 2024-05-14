@@ -7,7 +7,7 @@
 }
 
 #body{
-    background-image: linear-gradient(#e66465, #9198e5);
+    // background-image: linear-gradient(#e66465, #9198e5);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -84,6 +84,10 @@
     background-color: white;
     padding-left:1vw;
     padding-right:1vw;
+    overflow-y:scroll;
+    &::-webkit-scrollbar {
+        display:none;
+    }
 }
 
 #info img{
