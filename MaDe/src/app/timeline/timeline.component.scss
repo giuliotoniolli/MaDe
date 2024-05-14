@@ -34,13 +34,14 @@
 
 .point-text {
     position: absolute;
-    top: -30px;
+    top: -40px;
     /* Adjust this value to position the text above the point */
-    left: 10px;
+    left: 100px;
     transform: translateX(-50%);
     text-align: center;
     white-space: nowrap;
     text-align: center;
+    color:black;
 }
 
 .timeline {
@@ -50,7 +51,6 @@
     right: 0;
     height: 100px;
     background-color: #ffffff;
-    color: var(--bgcolor);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,12 +58,14 @@
     text-align: center;
   }
 
-h3 {
+h6 {
     background-color:white;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 20px;
     padding-left: 2vw;
+    position: absolute;
 }
 p {
-    color:var(--bgcolor);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--bgcolor);
 }

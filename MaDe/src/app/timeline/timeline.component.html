@@ -1,4 +1,4 @@
-<h3>Open days:</h3>
+<h6>Open days:</h6>
 <div class="all" [ngStyle]="{'--bgcolor': color}">
 	<div class="timeline">
 		@if(ce){
@@ -7,7 +7,7 @@
 					@for(oD of openDays.data; track oD.id){
 					<div class="point" title="{{oD.attributes.Note}}">
 						<span class="point-text">{{dataInv(oD.attributes.Date)}}
-							<br><br>
+							<br>
 							ore: {{oD.attributes.StartTime.substring(0,5)}} - {{oD.attributes.EndTime.substring(0,5)}}
 						</span>
 					</div>

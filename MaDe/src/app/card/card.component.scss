@@ -123,9 +123,11 @@
     border-radius: 1rem;
   }
 }
-.pin:hover {
-  .info {
+.pin:hover .info {
     display: flex;
     flex-direction: column;
   }
+
+img:hover {
+  background-image:radial-gradient(rgba(86, 86, 86, 0.242), rgb(255, 255, 255));
 }

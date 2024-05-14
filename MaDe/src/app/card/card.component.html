@@ -1,6 +1,8 @@
 <div class="pin" #pin [ngStyle]="{'top.px': top, 'left.px': left, '--bg-card': scuola.colore}">
   <div class="info">
-    <span [routerLink]="['/dettagli', id]" class="button" [ngStyle]="{'background-color': scuola.colore}">🔍</span>
+    <div style="width:100%; display:inline-flex; justify-content: end;">
+      <img style="width:20%;" src="/assets/pulsante.png" [routerLink]="['/dettagli', id]" class="button"/>
+    </div>
     <div class="logo" [ngStyle]="{'background-image': UrlLogo}">
     </div>
     <div class="title">

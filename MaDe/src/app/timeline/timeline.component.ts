@@ -21,6 +21,8 @@ export class TimelineComponent implements OnInit{
   ngOnInit(): void {
     if(this.openDays.data.length < 1){
       this.ce = false;
+    }else{
+      this.openDays.data.sort()
     }
   }
   
