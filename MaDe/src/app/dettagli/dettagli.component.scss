@@ -1,6 +1,13 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Rubik:ital,wght@0,300..900;1,300..900&family=Suez+One&family=Sulphur+Point:wght@300;400;700&display=swap');
-
+@font-face {
+    font-family: 'Rubik';
+    font-style: italic;
+    font-weight: 300 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnXy61F3f.woff2) format('woff2');
+    unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+  }
+  
 *{
     margin: 0;
     
