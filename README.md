@@ -21,3 +21,15 @@ se si esegue da codespace:
 
 se si esegue da locale:
 - inserire il link 127.0.0.1:1337 nel file /MaDe/src/app/common/data.service.ts nella variabile baseUrl
+
+per il build con server side rendering:
+```bash
+cd MaDe/
+ng build
+docker-compose up
+```
+
+```bash
+cd my-project/
+npm run develop
+```
